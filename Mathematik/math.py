@@ -4,7 +4,7 @@ curr_score=0
 
 Items=[]
 
-Items.append({
+Items.append(Taschenrechner={
     "name": "Taschenrechner",
     "Number": 13,
     "Power": 10
