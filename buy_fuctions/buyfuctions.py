@@ -1,5 +1,5 @@
 import Mathematik.math as mt
-import pandas as pd
+import  pandas as pd
 #Prices
 tasch_cost=1
 raspb_cost=2
@@ -9,15 +9,7 @@ gpu_cos=5
 saugroboter_cos=6
 mac_cos=7
 roboterarm_cos=8
-price_dict=[
-    "tasch_cost":{
-        "price":3
-    },
-    "rasp_cost":{
-        "price":2
-    }
 
-]
 
 #General
 def costincrement(cost):
