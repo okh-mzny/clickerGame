@@ -32,6 +32,11 @@ Itemsdict={
 def get_score():
     return curr_score
 
+def change_score(Scoreadd):
+    global curr_score
+    curr_score+=Scoreadd
+
+
 def increment():
     #return curr_score
     total_incr=0
