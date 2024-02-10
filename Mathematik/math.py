@@ -1,6 +1,6 @@
 import time
 
-curr_score=1
+curr_score=0
 
 Items=[]
 
@@ -13,9 +13,9 @@ Item={
 Items.append(Item)
 
 Item={
-    "name": "",
-    "Number": 13,
-    "Power": 10
+    "name": "RaspberryPi",
+    "Number": 5,
+    "Power": 20
 }
 
 Items.append(Item)
