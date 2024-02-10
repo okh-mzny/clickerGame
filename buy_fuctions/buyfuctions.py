@@ -1,4 +1,5 @@
 import Mathematik.math as mt
+import pandas as pd
 #Prices
 tasch_cost=1
 raspb_cost=2

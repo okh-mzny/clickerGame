@@ -4,13 +4,11 @@ curr_score=0
 
 Items=[]
 
-Item={
+Items.append({
     "name": "Taschenrechner",
     "Number": 13,
     "Power": 10
-}
-
-Items.append(Item)
+})
 
 Item={
     "name": "RaspberryPi",
