@@ -16,14 +16,32 @@ Items.append({
     "Power": 20
 })
 
+Itemsdict={
+    "Taschenrechner":{
+        "Name": "Taschenrechner",
+        "Number": 13,
+        "Power": 10
+    },
+    "RaspberryPi":{
+        "Name": "RaspberryPi",
+        "Number": 5,
+        "Power": 20
+    }
+}
+
 def get_score():
     return curr_score
+
+def change_score(Scoreadd):
+    global curr_score
+    curr_score+=Scoreadd
+
 
 def increment():
     #return curr_score
     total_incr=0
-    for Item in Items:
-        total_incr+=Item["Number"]*Item["Power"]
+    for Item in Itemsdict:
+        total_incr+=Itemsdict[Item]["Number"]*Itemsdict[Item]["Power"]
     return total_incr
 
 def calc_twolog(rest_score):
@@ -65,11 +83,11 @@ def pot(exp):
     return pot
 
 if(__name__=="__main__"):
-    for item in Items:
-        if(item["Name"]=="Taschenrechner"):
-            print(Items[Items.index(item)])
-            item["Number"]=item["Number"]+1
-            print(Items[Items.index(item)])
+    #for item in Items:
+    #    if(item["Name"]=="Taschenrechner"):
+    #        print(Items[Items.index(item)])
+    #        item["Number"]=item["Number"]+1
+    #        print(Items[Items.index(item)])
     while True:
         twolog=calc_twolog(get_score())
         if(twolog<10):
