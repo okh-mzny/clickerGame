@@ -68,26 +68,27 @@ def pot(exp):
             pot=pot*10
     return pot
 
-while True:
-    twolog=calc_twolog(get_score())
-    if(twolog<10):
-        new_score=curr_score
-        print("{:.2f}".format(curr_score)+"byte")
-    elif(twolog<20):
-        new_score=curr_score/pot2(10)
-        print("{:.2f}".format(curr_score/pot2(10))+"kb")
-    elif(twolog<30):
-        new_score=curr_score/pot2(20)
-        print("{:.2f}".format(curr_score/pot2(20))+"Mb")
-    elif(twolog<40):
-        new_score=curr_score/pot2(30)
-        print("{:.2f}".format(curr_score/pot2(30))+"Gb")
-    elif(twolog<50):
-        new_score=curr_score/pot2(40)
-        print("{:.2f}".format(curr_score/pot2(40))+"Tb")
-    else:
-        new_score=curr_score/pot2(40)
-        tenlog=calc_tenlog(new_score)
-        print("{:.2f}".format(new_score/pot(tenlog))+"e"+str(tenlog)+" Tb")
-    curr_score+=increment()
-    time.sleep(1)
+if(__name__=="__main__"):
+    while True:
+        twolog=calc_twolog(get_score())
+        if(twolog<10):
+            new_score=curr_score
+            print("{:.2f}".format(curr_score)+"byte")
+        elif(twolog<20):
+            new_score=curr_score/pot2(10)
+            print("{:.2f}".format(curr_score/pot2(10))+"kb")
+        elif(twolog<30):
+            new_score=curr_score/pot2(20)
+            print("{:.2f}".format(curr_score/pot2(20))+"Mb")
+        elif(twolog<40):
+            new_score=curr_score/pot2(30)
+            print("{:.2f}".format(curr_score/pot2(30))+"Gb")
+        elif(twolog<50):
+            new_score=curr_score/pot2(40)
+            print("{:.2f}".format(curr_score/pot2(40))+"Tb")
+        else:
+            new_score=curr_score/pot2(40)
+            tenlog=calc_tenlog(new_score)
+            print("{:.2f}".format(new_score/pot(tenlog))+"e"+str(tenlog)+" Tb")
+        curr_score+=increment()
+        time.sleep(1)
