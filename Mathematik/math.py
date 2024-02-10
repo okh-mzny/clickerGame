@@ -4,19 +4,17 @@ curr_score=0
 
 Items=[]
 
-Items.append(Taschenrechner={
-    "name": "Taschenrechner",
+Items.append({
+    "Name": "Taschenrechner",
     "Number": 13,
     "Power": 10
 })
 
-Item={
-    "name": "RaspberryPi",
+Items.append({
+    "Name": "RaspberryPi",
     "Number": 5,
     "Power": 20
-}
-
-Items.append(Item)
+})
 
 def get_score():
     return curr_score
@@ -67,6 +65,11 @@ def pot(exp):
     return pot
 
 if(__name__=="__main__"):
+    for item in Items:
+        if(item["Name"]=="Taschenrechner"):
+            print(Items[Items.index(item)])
+            item["Number"]=item["Number"]+1
+            print(Items[Items.index(item)])
     while True:
         twolog=calc_twolog(get_score())
         if(twolog<10):
