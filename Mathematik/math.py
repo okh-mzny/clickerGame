@@ -2,20 +2,6 @@ import time
 
 curr_score=0
 
-Items=[]
-
-Items.append({
-    "Name": "Taschenrechner",
-    "Number": 13,
-    "Power": 10
-})
-
-Items.append({
-    "Name": "RaspberryPi",
-    "Number": 5,
-    "Power": 20
-})
-
 Itemsdict={
     "Taschenrechner":{
         "Name": "Taschenrechner",
@@ -96,32 +82,27 @@ def pot(exp):
     return pot
 
 if(__name__=="__main__"):
-    #for item in Items:
-    #    if(item["Name"]=="Taschenrechner"):
-    #        print(Items[Items.index(item)])
-    #        item["Number"]=item["Number"]+1
-    #        print(Items[Items.index(item)])
     while True:
         twolog=calc_twolog(get_score())
         if(twolog<10):
             new_score=curr_score
-            print("{:.2f}".format(curr_score)+"byte")
+            print("{:.2f}".format(curr_score)+"Byte")
         elif(twolog<20):
             new_score=curr_score/pot2(10)
-            print("{:.2f}".format(curr_score/pot2(10))+"kb")
+            print("{:.2f}".format(curr_score/pot2(10))+"kB")
         elif(twolog<30):
             new_score=curr_score/pot2(20)
-            print("{:.2f}".format(curr_score/pot2(20))+"Mb")
+            print("{:.2f}".format(curr_score/pot2(20))+"MB")
         elif(twolog<40):
             new_score=curr_score/pot2(30)
-            print("{:.2f}".format(curr_score/pot2(30))+"Gb")
+            print("{:.2f}".format(curr_score/pot2(30))+"GB")
         elif(twolog<50):
             new_score=curr_score/pot2(40)
-            print("{:.2f}".format(curr_score/pot2(40))+"Tb")
+            print("{:.2f}".format(curr_score/pot2(40))+"TB")
         else:
             new_score=curr_score/pot2(40)
             tenlog=calc_tenlog(new_score)
-            print("{:.2f}".format(new_score/pot(tenlog))+"e"+str(tenlog)+" Tb")
+            print("{:.2f}".format(new_score/pot(tenlog))+"e"+str(tenlog)+" TB")
         Add_toScore(increment())
         AddNumtoItem(1,"Taschenrechner")
         AddPowtoItem(1,"RaspberryPi")
