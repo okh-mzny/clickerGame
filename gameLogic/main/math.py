@@ -33,11 +33,10 @@ class MathLogic:
                 self.Itemsdict[Name]["Power"]=self.Itemsdict[Name]["Power"]*Mult
 
     def get_score(self):
-        return curr_score
+        return self.curr_score
 
     def Add_toScore(self, Scoreadd):
-        global curr_score
-        curr_score+=Scoreadd
+        self.curr_score+=Scoreadd
 
     def increment(self):
         total_incr=0
