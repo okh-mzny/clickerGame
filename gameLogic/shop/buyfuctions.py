@@ -30,8 +30,8 @@ def costred(cost,costmod):
 
 #Taschenrechner
 def tasch_buy():
-    if(mt.get_score>=prices_dict["tasch_cost"]):
-        mt.get_score-prices_dict["tasch_cost"]
+    if(mt.get_score()>=prices_dict["tasch_cost"]):
+        mt.get_score()-prices_dict["tasch_cost"]
         prices_dict["tasch_cost"]=costincrement(prices_dict["tasch_cost"])
         return True
     else:
@@ -39,56 +39,56 @@ def tasch_buy():
 
 #RaspberryPI
 def raspberry_buy():
-    if(mt.get_score>=prices_dict["raspb_cost"]):
-        mt.get_score-prices_dict["raspb_cost"]
+    if(mt.get_score()>=prices_dict["raspb_cost"]):
+        mt.get_score()-prices_dict["raspb_cost"]
         prices_dict["raspb_cost"]=costincrement(prices_dict["raspb_cost"])
         return True
     else:
         return False
 #Arduino    
 def arduino_buy():
-    if(mt.get_score>=prices_dict["arduino_cost"]):
-        mt.get_score-prices_dict["arduino_cost"]
+    if(mt.get_score()>=prices_dict["arduino_cost"]):
+        mt.get_score()-prices_dict["arduino_cost"]
         prices_dict["arduino_cost"]=costincrement(prices_dict["arduino_cost"])
         return True
     else:
         return False
 #CPU
 def cpu_buy():
-    if(mt.get_score>=prices_dict["cpu_cost"]):
-        mt.get_score-prices_dict["cpu_cost"]
+    if(mt.get_score()>=prices_dict["cpu_cost"]):
+        mt.get_score()-prices_dict["cpu_cost"]
         prices_dict["cpu_cost"]=costincrement(prices_dict["cpu_cost"])
         return True
     else:
         return False    
 #GPU
 def gpu_buy():
-    if(mt.get_score>=prices_dict["gpu_cost"]):
-        mt.get_score-prices_dict["gpu_cost"]
+    if(mt.get_score()>=prices_dict["gpu_cost"]):
+        mt.get_score()-prices_dict["gpu_cost"]
         prices_dict["gpu_cost"]=costincrement(prices_dict["gpu_cost"])
         return True
     else:
         return False 
 #Saugroboter
 def saugroboter_buy():
-    if(mt.get_score>=prices_dict["saugroboter_cost"]):
-        mt.get_score-prices_dict["saugroboter_cost"]
+    if(mt.get_score()>=prices_dict["saugroboter_cost"]):
+        mt.get_score()-prices_dict["saugroboter_cost"]
         prices_dict["saugroboter_cost"]=costincrement(prices_dict["saugroboter_cost"])
         return True
     else:
         return False 
 #MAC
 def mac_buy():
-    if(mt.get_score>=prices_dict["mac_cost"]):
-        mt.get_score-prices_dict["mac_cost"]
+    if(mt.get_score()>=prices_dict["mac_cost"]):
+        mt.get_score()-prices_dict["mac_cost"]
         prices_dict["mac_cost"]=costincrement(prices_dict["mac_cost"])
         return True
     else:
         return False 
 #Roboterarm
 def roboteramrm_buy():
-    if(mt.get_score>=prices_dict["roboterarm_cost"]):
-        mt.get_score-prices_dict["roboterarm_cost"]
+    if(mt.get_score()>=prices_dict["roboterarm_cost"]):
+        mt.get_score()-prices_dict["roboterarm_cost"]
         prices_dict["roboterarm_cost"]=costincrement(prices_dict["roboterarm_cost"])
         return True
     else:
