@@ -1,10 +1,10 @@
 import sys
 
-from PyQt6 import QtWidgets, QtGui, uic
+from PyQt6 import QtWidgets, QtGui, QtCore, uic
 
 import gameLogic.main.items as itemDefinition
 
-import gameLogic.main.math as gameMath
+import gameLogic.main.mathLogic as gameMath
 import gameLogic.shop.buyfuctions as gameBuyFunctions
 
 cols = ['nameLabel',
@@ -57,10 +57,19 @@ class MainWindow(QtWidgets.QMainWindow):
             self.shopTable.cellWidget(newRowCount, cols.index('costLabel')).setText(f'{item['cost']}')
             self.shopTable.cellWidget(newRowCount, cols.index('buyButton')).clicked.connect(self.clickHandler)
 
+            self.gameTimer = QtCore.QTimer()
+            self.gameTimer.timeout.connect(self.timerHandler)
+            self.gameTimer.start(1000)
+
     def clickHandler(self):
         item_id = ""
         for item in itemDefinition.items:
             if self.sender() is self.shopItemWidgets[item['id']]['buyButton']:
                 item_id = item['id']
                 break
-        print(item_id)
+        if item_id:
+            self.gameShopObj.buy(item_id)
+
+    def timerHandler(self):
+        self.gameMathObj.update()
+        self.numBytesLabel.setText(self.gameMathObj.prettyPrint())

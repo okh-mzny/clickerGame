@@ -20,7 +20,7 @@ class BuyFunctions:
     def buy(self, item_id):
         if self.mtObject.get_score() >= self.prices_dict[item_id]:
             self.mtObject.get_score() - self.prices_dict[item_id]
-            self.prices_dict[item_id]["tasch_cost"] = self.costincrement(self.prices_dict[item_id])
+            self.prices_dict[item_id] = self.costincrement(self.prices_dict[item_id])
             return True
         else:
             return False
