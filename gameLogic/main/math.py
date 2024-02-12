@@ -1,48 +1,41 @@
 import time
+import gameLogic.main.items as itemDefinition
+
 
 class MathLogic:
 
     curr_score=0
 
-    Itemsdict={
-        "Taschenrechner":{
-            "Name": "Taschenrechner",
-            "Number": 13,
-            "Power": 10
-        },
-        "RaspberryPi":{
-            "Name": "RaspberryPi",
-            "Number": 5,
-            "Power": 20
-        }
-    }
+    items_dict={}
 
-    def AddNumtoItem(self, Num,Itemname):
-        for Name in self.Itemsdict:
-            if(Name==Itemname):
-                self.Itemsdict[Name]["Number"]+=Num
+    def __init__(self):
+        for item in itemDefinition.items:
+            self.items_dict[item['id']] = {}
+            self.items_dict[item['id']]['power'] = item['power']
+            self.items_dict[item['id']]['number'] = 0
 
-    def AddPowtoItem(self, Pow,Itemname):
-        for Name in self.Itemsdict:
-            if(Name==Itemname):
-                self.Itemsdict[Name]["Power"]+=Pow
+    def AddNumtoItem(self, Num, item_id):
+        if item_id in self.items_dict.keys():
+            self.items_dict[item_id]["number"] += Num
 
-    def MultPowofItem(self, Mult,Itemname):
-        for Name in self.Itemsdict:
-            if(Name==Itemname):
-                self.Itemsdict[Name]["Power"]=self.Itemsdict[Name]["Power"]*Mult
+    def AddPowtoItem(self, Pow, item_id):
+        if item_id in self.items_dict.keys():
+            self.items_dict[item_id]["power"] += Pow
+
+    def MultPowofItem(self, Mult, item_id):
+        if item_id in self.items_dict.keys():
+            self.items_dict[item_id]["power"]= self.items_dict[item_id]["power"] * Mult
 
     def get_score(self):
-        return curr_score
+        return self.curr_score
 
     def Add_toScore(self, Scoreadd):
-        global curr_score
-        curr_score+=Scoreadd
+        self.curr_score+=Scoreadd
 
     def increment(self):
         total_incr=0
-        for Item in self.Itemsdict:
-            total_incr+=self.Itemsdict[Item]["Number"]*self.Itemsdict[Item]["Power"]
+        for Item in self.items_dict:
+            total_incr+= self.items_dict[Item]["number"] * self.items_dict[Item]["power"]
         return total_incr
 
     def calc_twolog(self, rest_score):
@@ -107,7 +100,7 @@ if(__name__=="__main__"):
             tenlog=mathlogic.calc_tenlog(new_score)
             print("{:.2f}".format(new_score/mathlogic.pot(tenlog))+"e"+str(tenlog)+" TB")
         mathlogic.Add_toScore(mathlogic.increment())
-        mathlogic.AddNumtoItem(1,"Taschenrechner")
-        mathlogic.AddPowtoItem(1,"RaspberryPi")
+        mathlogic.AddNumtoItem(1,"tasch")
+        mathlogic.AddPowtoItem(1,"raspb")
         mathlogic.MultPowofItem(1.01,"Taschenrechner")
         time.sleep(1)
