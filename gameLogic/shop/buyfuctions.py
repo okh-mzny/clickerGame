@@ -12,13 +12,6 @@ prices_dict={
     "roboterarm_cost":10
 }
 
-prices_dict["arduino_cost"]=3
-prices_dict["cpu_cost"]=4
-prices_dict["cpu_cost"]=5
-prices_dict["saugroboter_cost"]=6
-prices_dict["mac_cost"]=7
-prices_dict["roboterarm_cost"]=8
-
 
 #General
 def costincrement(cost):
