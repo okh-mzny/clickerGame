@@ -1,5 +1,5 @@
-import Mathematik.math as mt
-import  pandas as pd
+import gameLogic.main.math as mt
+
 #Prices
 prices_dict={
     "tasch_cost":10,
