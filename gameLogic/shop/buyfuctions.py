@@ -9,8 +9,7 @@ prices_dict={
     "gpu_cost":10,
     "saugroboter_cost":10,
     "mac_cost":10,
-    "roboterarm_cost":10,
-
+    "roboterarm_cost":10
 }
 
 prices_dict["arduino_cost"]=3
@@ -29,7 +28,7 @@ def costred(cost,costmod):
     cost=cost-cost*costmod
 
 #Taschenrechner
-def tasch_buy():
+def buy(item):
     if(mt.get_score()>=prices_dict["tasch_cost"]):
         mt.get_score()-prices_dict["tasch_cost"]
         prices_dict["tasch_cost"]=costincrement(prices_dict["tasch_cost"])

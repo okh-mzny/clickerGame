@@ -126,16 +126,11 @@
          <bool>false</bool>
         </property>
         <property name="rowCount">
-         <number>1</number>
+         <number>0</number>
         </property>
         <property name="columnCount">
          <number>6</number>
         </property>
-        <row>
-         <property name="text">
-          <string>1</string>
-         </property>
-        </row>
         <column>
          <property name="text">
           <string>Name</string>
