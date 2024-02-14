@@ -75,9 +75,8 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset>
-          <normalon>:/res/Matrix.png</normalon>
-         </iconset>
+         <iconset resource="res.qrc">
+          <normaloff>:/res/res/pushBtn.png</normaloff>:/res/res/pushBtn.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -178,13 +177,15 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>910</width>
+     <height>23</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>

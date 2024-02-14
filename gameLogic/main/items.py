@@ -2,41 +2,41 @@
 items = (
     {"id": "tasch",
      "nameLabel": "Taschenrechner",
-     "cost": 1,
-     "power": 10},
+     "cost": 5,
+     "power": 1},
 
     {"id": "raspb",
      "nameLabel": "Raspberry Pi",
-     "cost": 2,
-     "power": 20},
+     "cost": 20,
+     "power": 5},
 
     {"id": "arduino",
      "nameLabel": "Arduino",
-     "cost": 3,
-     "power": 30},
+     "cost": 80,
+     "power": 10},
 
     {"id": "cpu",
      "nameLabel": "CPU",
-     "cost": 4,
+     "cost": 120,
      "power": 40},
 
     {"id": "gpu",
      "nameLabel": "GPU",
-     "cost": 5,
+     "cost": 200,
      "power": 50},
 
     {"id": "saugroboter",
      "nameLabel": "Saugroboter",
-     "cost": 6,
-     "power": 60},
+     "cost": 500,
+     "power": 100},
 
     {"id": "mac",
      "nameLabel": "Macintosh",
-     "cost": 7,
-     "power": 70},
+     "cost": 1000,
+     "power": 300},
 
     {"id": "roboterarm",
      "nameLabel": "Roboterarm",
-     "cost": 8,
-     "power": 80}
+     "cost": 2000,
+     "power": 800}
 )
