@@ -61,6 +61,10 @@ class MainWindow(QtWidgets.QMainWindow):
             self.gameTimer.timeout.connect(self.timerHandler)
             self.gameTimer.start(1000)
             self.updateTotalBps()
+            
+
+    def updatePrice(self,item_id):
+        self.shopItemWidgets[item_id]['costLabel'].setText(f'{self.gameShopObj.prices_dict[item_id]}')
 
     def updateTotalBps(self):
         sum = 0
@@ -86,6 +90,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.shopItemWidgets[item_id]['totalGeneratingLabel'].setText(
                     f'{self.gameMathObj.items_dict[item_id]["number"] * self.gameMathObj.items_dict[item_id]["power"]}')
                 self.updateTotalBps()
+                self.updatePrice(item_id)
 
     def timerHandler(self):
         self.gameMathObj.update()
