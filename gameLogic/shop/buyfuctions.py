@@ -1,5 +1,5 @@
 import gameLogic.main.math as mt
-import items 
+import items
 
 #Prices
 prices_dict={
@@ -15,11 +15,10 @@ prices_dict={
 
 
 #General
-def costincrement(cost):
-    return cost+1
+#in editing
+def costred(id,costmod):
+    items.items[1]
 
-def costred(cost,costmod):
-    cost=cost-cost*costmod
 #Taschenrechner
 def buy(item):
     if(mt.MathLogic.get_score()>=prices_dict["tasch_cost"]):
