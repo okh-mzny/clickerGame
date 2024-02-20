@@ -54,10 +54,10 @@ class MainWindow(QtWidgets.QMainWindow):
             newRowCount = self.shopTable.rowCount()
             self.shopItemWidgets[item_id] = {
                 "nameLabel": QtWidgets.QLabel(item["nameLabel"]),
-                "oneGeneratingLabel": QtWidgets.QLabel(f"{prettyPrint(item["power"])}/s"),
-                "costLabel": QtWidgets.QLabel(f"{prettyPrint(item["cost"])}"),
+                "oneGeneratingLabel": QtWidgets.QLabel(f'{prettyPrint(item["power"])}/s'),
+                "costLabel": QtWidgets.QLabel(f'{prettyPrint(item["cost"])}'),
                 "buyButton": QtWidgets.QPushButton("Buy"),
-                "totalOwnedLabel": QtWidgets.QLabel(f"{item["ownedCount"]}"),
+                "totalOwnedLabel": QtWidgets.QLabel(f'{item["ownedCount"]}'),
                 "totalGeneratingLabel": QtWidgets.QLabel()
             }
             self.shopItemWidgets[item_id]["buyButton"].setAutoRepeat(True)
@@ -81,7 +81,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def refreshGuiValues(self):
         # update item lines
         for item_id, item in self.gameState.itemTable.items():
-            self.shopItemWidgets[item_id]["costLabel"].setText(f"{prettyPrint(self.gameState.itemTable[item_id]["cost"])}")
+            self.shopItemWidgets[item_id]["costLabel"].setText(f'{prettyPrint(self.gameState.itemTable[item_id]["cost"])}')
             self.shopItemWidgets[item_id]["totalOwnedLabel"].setText(
                 f"{self.gameState.itemTable[item_id]["ownedCount"]}")
             generation_sum = self.gameState.itemTable[item_id]["ownedCount"] * self.gameState.itemTable[item_id][
