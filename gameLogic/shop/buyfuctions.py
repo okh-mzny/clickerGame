@@ -1,30 +1,29 @@
-import gameLogic.main.math as mt
-import items 
-
-#Prices
-prices_dict={
-    "tasch_cost":10,
-    "raspb_cost":10,
-    "arduino_cost":10,
-    "cpu_cost":10,
-    "gpu_cost":10,
-    "saugroboter_cost":10,
-    "mac_cost":10,
-    "roboterarm_cost":10
-}
+import gameLogic.main.items as itemDefinition
 
 
-#General
-def costincrement(cost):
-    return cost+1
+class BuyFunctions:
+    mtObject = None
+    prices_dict = {}
 
-def costred(cost,costmod):
-    cost=cost-cost*costmod
-#Taschenrechner
-def buy(item):
-    if(mt.MathLogic.get_score()>=prices_dict["tasch_cost"]):
-        mt.MathLogic.get_score()-prices_dict["tasch_cost"]
-        prices_dict["tasch_cost"]=costincrement(prices_dict["tasch_cost"])
-        return True
-    else:
-        return False
+    def __init__(self, mtObject):
+        self.mtObject = mtObject
+        for item in itemDefinition.items:
+            self.prices_dict[item['id']] = item['cost']
+
+    # General
+    def costincrement(self, cost):
+        return cost + 1
+
+    def costred(self, cost, costmod):
+        cost = cost - cost * costmod
+
+    def buy(self, item_id):
+        item_cost = self.prices_dict[item_id]
+        if self.mtObject.get_score() >= item_cost:
+            self.mtObject.get_score() - item_cost
+            self.prices_dict[item_id] = self.costincrement(item_cost)
+            self.mtObject.AddNumtoItem(1, item_id)
+            self.mtObject.Remove_fromScore(item_cost)
+            return True
+        else:
+            return False
