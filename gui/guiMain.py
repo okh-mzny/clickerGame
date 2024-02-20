@@ -83,7 +83,7 @@ class MainWindow(QtWidgets.QMainWindow):
         for item_id, item in self.gameState.itemTable.items():
             self.shopItemWidgets[item_id]["costLabel"].setText(f'{prettyPrint(self.gameState.itemTable[item_id]["cost"])}')
             self.shopItemWidgets[item_id]["totalOwnedLabel"].setText(
-                f"{self.gameState.itemTable[item_id]["ownedCount"]}")
+                f'{self.gameState.itemTable[item_id]["ownedCount"]}')
             generation_sum = self.gameState.itemTable[item_id]["ownedCount"] * self.gameState.itemTable[item_id][
                 "power"]
             self.shopItemWidgets[item_id]["totalGeneratingLabel"].setText(f"{prettyPrint(generation_sum)}/s")
