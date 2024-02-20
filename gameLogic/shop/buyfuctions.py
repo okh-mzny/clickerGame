@@ -1,30 +1,31 @@
-import gameLogic.main.math as mt
-import items 
+import math
 
-#Prices
-prices_dict={
-    "tasch_cost":10,
-    "raspb_cost":10,
-    "arduino_cost":10,
-    "cpu_cost":10,
-    "gpu_cost":10,
-    "saugroboter_cost":10,
-    "mac_cost":10,
-    "roboterarm_cost":10
-}
+import gameState.items as itemDefinition
+from gameState.gamestate import GameState
 
 
-#General
-def costincrement(cost):
-    return cost+1
+class BuyFunctions:
 
-def costred(cost,costmod):
-    cost=cost-cost*costmod
-#Taschenrechner
-def buy(item):
-    if(mt.MathLogic.get_score()>=prices_dict["tasch_cost"]):
-        mt.MathLogic.get_score()-prices_dict["tasch_cost"]
-        prices_dict["tasch_cost"]=costincrement(prices_dict["tasch_cost"])
-        return True
-    else:
-        return False
+    gameState = None
+
+    def __init__(self, gameState: GameState):
+        self.gameState = gameState
+
+    def buy(self, item_id):
+        # get item cost to use
+        item_cost = self.gameState.itemTable[item_id]['cost']
+        # check if player can afford to buy item
+        if self.gameState.score >= item_cost:
+            # deduct the cost
+            self.gameState.score -= item_cost
+            # calculate the new cost of the item
+            newCost = math.ceil(self.gameState.itemTable[item_id]['cost'] * self.gameState.itemTable[item_id]['costmod'])
+            # set new cost of the item
+            self.gameState.itemTable[item_id]['cost'] = newCost
+            # player now owns one more of the item
+            self.gameState.itemTable[item_id]['ownedCount'] += 1
+            # signify successful purchase
+            return True
+        else:
+            # can't afford item
+            return False
