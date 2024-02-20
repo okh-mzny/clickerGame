@@ -94,32 +94,3 @@ class MathLogic:
     def update(self):
         self.Add_toScore(self.increment())
 
-
-if __name__ == "__main__":
-    mathlogic = MathLogic()
-    while True:
-        mathlogic.update()
-        twolog = mathlogic.calc_twolog(mathlogic.get_score())
-        if twolog < 10:
-            new_score = mathlogic.curr_score
-            print("{:.2f}".format(mathlogic.curr_score) + "Byte")
-        elif twolog < 20:
-            new_score = mathlogic.curr_score / mathlogic.pot2(10)
-            print("{:.2f}".format(mathlogic.curr_score / mathlogic.pot2(10)) + "kB")
-        elif twolog < 30:
-            new_score = mathlogic.curr_score / mathlogic.pot2(20)
-            print("{:.2f}".format(mathlogic.curr_score / mathlogic.pot2(20)) + "MB")
-        elif twolog < 40:
-            new_score = mathlogic.curr_score / mathlogic.pot2(30)
-            print("{:.2f}".format(mathlogic.curr_score / mathlogic.pot2(30)) + "GB")
-        elif twolog < 50:
-            new_score = mathlogic.curr_score / mathlogic.pot2(40)
-            print("{:.2f}".format(mathlogic.curr_score / mathlogic.pot2(40)) + "TB")
-        else:
-            new_score = mathlogic.curr_score / mathlogic.pot2(40)
-            tenlog = mathlogic.calc_tenlog(new_score)
-            print("{:.2f}".format(new_score / mathlogic.pot(tenlog)) + "e" + str(tenlog) + " TB")
-        mathlogic.AddNumtoItem(1, "tasch")
-        mathlogic.AddPowtoItem(1, "raspb")
-        mathlogic.MultPowofItem(1.01, "Taschenrechner")
-        time.sleep(1)
