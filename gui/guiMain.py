@@ -89,13 +89,10 @@ class MainWindow(QtWidgets.QMainWindow):
             self.shopItemWidgets[item_id]["totalGeneratingLabel"].setText(f"{prettyPrint(generation_sum)}/s")
 
         # update bps
-        bps_sum = 0
-        for item_id, item in self.gameState.itemTable.items():
-            bps_sum += self.gameState.itemTable[item_id]["ownedCount"] * self.gameState.itemTable[item_id]["power"]
-        self.numBpsLabel.setText(f"Generating {prettyPrint(bps_sum)}/s")
+        self.numBpsLabel.setText(f"Generating {prettyPrint(self.gameMathObj.total_gen())}/s")
 
     def mainClickHandler(self):
-        self.gameState.score += 1
+        self.gameState.score += math.ceil(0.01*self.gameMathObj.total_gen())
         self.numBytesLabel.setText(prettyPrint(self.gameState.score))
 
     def buyClickHandler(self):
