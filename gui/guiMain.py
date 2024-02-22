@@ -46,6 +46,7 @@ class MainWindow(QtWidgets.QMainWindow):
     gameShopObj = None
 
     shopItemWidgets = {}
+    upgradeItemWidgets = {}
 
     def __init__(self, *args, obj=None, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
@@ -76,6 +77,19 @@ class MainWindow(QtWidgets.QMainWindow):
                     self.shopTable.setCellWidget(newRowCount, col, self.shopItemWidgets[item_id][col_name])
 
             self.shopTable.cellWidget(newRowCount, cols.index("buyButton")).clicked.connect(self.buyClickHandler)
+        
+        for upgrade_id, upgrade in self.gameState.upgradeTable.items():
+            newRowCount = self.upgradeTable.rowCount()
+            self.upgradeItemWidgets[upgrade_id]={
+                "upgradeButton": QtWidgets.QPushButton(f"{upgrade['nameLabel']} \nCost: {upgrade['cost']} {upgrade['costType']}")
+            }
+
+            self.upgradeItemWidgets[upgrade_id]["upgradeButton"].setAutoRepeat(True)
+            self.upgradeItemWidgets[upgrade_id]["upgradeButton"].setAutoRepeatInterval(1)
+
+            self.upgradeTable.insertRow(newRowCount)
+            self.upgradeTable.setCellWidget(newRowCount,0,self.upgradeItemWidgets[upgrade_id]["upgradeButton"])
+            self.upgradeTable.cellWidget(newRowCount,0).clicked.connect(self.upgradeClickHandler)
 
         self.gameTimer = QtCore.QTimer()
         self.gameTimer.timeout.connect(self.timerHandler)
@@ -84,6 +98,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def closeEvent(self, a0):
         self.gameState.saveState()
+        #self.gameState.resetState()
 
     def refreshGuiValues(self):
         # update item lines
@@ -94,9 +109,13 @@ class MainWindow(QtWidgets.QMainWindow):
             generation_sum = self.gameState.itemTable[item_id]["ownedCount"] * self.gameState.itemTable[item_id][
                 "power"]
             self.shopItemWidgets[item_id]["totalGeneratingLabel"].setText(f"{prettyPrint(generation_sum)}/s")
+            self.shopItemWidgets[item_id]["oneGeneratingLabel"].setText(f'{prettyPrint(item["power"])}/s')
+        for upgrade_id, upgrade in self.gameState.upgradeTable.items():
+            self.upgradeItemWidgets[upgrade_id]["upgradeButton"].setText(f"{upgrade['nameLabel']} \nCost: {upgrade['cost']} {upgrade['costType']}")
 
-        # update bps
+        # update bps and score
         self.numBpsLabel.setText(f"Generating {prettyPrint(self.gameMathObj.total_gen())}/s")
+        self.numBytesLabel.setText(prettyPrint(self.gameState.score))
 
     def mainClickHandler(self):
         if(self.gameMathObj.total_gen()>0):
@@ -119,3 +138,14 @@ class MainWindow(QtWidgets.QMainWindow):
     def timerHandler(self):
         self.gameMathObj.update()
         self.numBytesLabel.setText(prettyPrint(self.gameState.score))
+
+    def upgradeClickHandler(self):
+        clicked_upgrade_id = ""
+        for upgrade_id, upgrade in self.gameState.upgradeTable.items():
+            if self.sender() is self.upgradeItemWidgets[upgrade_id]["upgradeButton"]:
+                clicked_upgrade_id = upgrade_id
+                break
+        if clicked_upgrade_id:
+            buy_success = self.gameShopObj.buy_upgrade(clicked_upgrade_id)
+            if buy_success:
+                self.refreshGuiValues()

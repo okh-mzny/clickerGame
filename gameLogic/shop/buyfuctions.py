@@ -31,7 +31,7 @@ class BuyFunctions:
             return False
 
     def buy_upgrade(self, upgrade_id):
-        #get upgrade
+        # get upgrade, toitem and fromitem
         upgrade = self.gameState.upgradeTable[upgrade_id]
         upgrade_cost = upgrade["cost"]
         fromid = upgrade["fromid"]
@@ -43,15 +43,16 @@ class BuyFunctions:
             # deduct the cost from fromitem
             fromitem["ownedCount"] -= upgrade_cost
             # reset cost of fromitem
-            fromitem["cost"] = int(fromitem["cost"] / math.pow(fromitem["costmod"]),upgrade_cost)
+            fromitem["cost"] = int(fromitem["cost"] / math.pow(fromitem["costmod"],upgrade_cost))
             # Add effect to toitem
-            toitem["cost"] = int(toitem["cost"]*upgrade["redcost"])
-            toitem["power"] += int(toitem["power"]*upgrade["powmod"])
+            toitem["cost"] = int(math.ceil(toitem["cost"]*upgrade["redcost"]))
+            toitem["power"] += int(math.ceil(toitem["power"]*upgrade["powmod"]))
             # Change state of upgrade
-            upgrade["cost"] = int(upgrade_cost*upgrade["costmod"])
+            upgrade["cost"] = int(math.ceil(upgrade_cost*upgrade["costmod"]))
             self.gameState.upgradeTable[upgrade_id] = upgrade
             self.gameState.itemTable[toid] = toitem
             self.gameState.itemTable[fromid] = fromitem
+            # signify succesfull purchase
             return True
         else:
             # can't afford upgrade

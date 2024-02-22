@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>896</width>
-    <height>400</height>
+    <width>1114</width>
+    <height>448</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -75,7 +75,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="res.qrc">
+         <iconset>
           <normaloff>:/res/res/pushBtn.png</normaloff>:/res/res/pushBtn.png</iconset>
         </property>
         <property name="iconSize">
@@ -111,7 +111,7 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1" rowspan="3">
+      <item row="0" column="2" rowspan="3">
        <widget class="QTableWidget" name="shopTable">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -179,6 +179,18 @@
       </item>
      </layout>
     </item>
+    <item row="0" column="1">
+     <widget class="QTableWidget" name="upgradeTable">
+      <property name="columnCount">
+       <number>1</number>
+      </property>
+      <column>
+       <property name="text">
+        <string>Upgrades</string>
+       </property>
+      </column>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -186,15 +198,13 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>896</width>
-     <height>21</height>
+     <width>1114</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="res.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

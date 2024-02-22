@@ -19,6 +19,7 @@ class GameState:
         for item_id, item in self.itemTable.items():
             self.settings.setValue(f"items/{item_id}/cost", item["cost"])
             self.settings.setValue(f"items/{item_id}/ownedCount", 0)
+            self.settings.setValue(f"items/{item_id}/power",item["power"])
         for upgrade in upgradeDefinition.upgrades:
             self.upgradeTable[upgrade["id"]] = upgrade.copy()
         for upgrade_id, upgrade in self.upgradeTable.items():
@@ -55,7 +56,6 @@ class GameState:
             
             for upgrade_id, upgrade in self.upgradeTable.items():
                 upgrade["cost"] = int(self.settings.value(f"upgrades/{upgrade_id}/cost"))
-                Nothin=1
 
         else:
             # we need to initialize data for a new game from the item definition template
