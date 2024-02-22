@@ -99,7 +99,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.numBpsLabel.setText(f"Generating {prettyPrint(self.gameMathObj.total_gen())}/s")
 
     def mainClickHandler(self):
-        self.gameState.score += math.ceil(0.01*self.gameMathObj.total_gen())
+        if(self.gameMathObj.total_gen()>0):
+            self.gameState.score += math.ceil(0.01*self.gameMathObj.total_gen())
+        else:
+            self.gameState.score+=1
         self.numBytesLabel.setText(prettyPrint(self.gameState.score))
 
     def buyClickHandler(self):

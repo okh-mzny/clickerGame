@@ -29,3 +29,30 @@ class BuyFunctions:
         else:
             # can"t afford item
             return False
+
+    def buy_upgrade(self, upgrade_id):
+        #get upgrade
+        upgrade = self.gameState.upgradeTable[upgrade_id]
+        upgrade_cost = upgrade["cost"]
+        fromid = upgrade["fromid"]
+        fromitem = self.gameState.itemTable[fromid]
+        toid = upgrade["toid"]
+        toitem = self.gameState.itemTable[toid]
+        # check if player can afford to buy upgrade
+        if fromitem["ownedCount"] >= upgrade_cost:
+            # deduct the cost from fromitem
+            fromitem["ownedCount"] -= upgrade_cost
+            # reset cost of fromitem
+            fromitem["cost"] = int(fromitem["cost"] / math.pow(fromitem["costmod"]),upgrade_cost)
+            # Add effect to toitem
+            toitem["cost"] = int(toitem["cost"]*upgrade["redcost"])
+            toitem["power"] += int(toitem["power"]*upgrade["powmod"])
+            # Change state of upgrade
+            upgrade["cost"] = int(upgrade_cost*upgrade["costmod"])
+            self.gameState.upgradeTable[upgrade_id] = upgrade
+            self.gameState.itemTable[toid] = toitem
+            self.gameState.itemTable[fromid] = fromitem
+            return True
+        else:
+            # can't afford upgrade
+            return False
