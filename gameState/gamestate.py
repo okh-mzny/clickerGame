@@ -25,6 +25,7 @@ class GameState:
         for upgrade_id, upgrade in self.upgradeTable.items():
             self.settings.setValue(f"upgrades/{upgrade_id}/cost", upgrade["cost"])
         self.settings.sync()
+        self.Initialize_Tables()
 
     def saveState(self):
         self.settings.setValue("score", self.score)
@@ -37,6 +38,13 @@ class GameState:
         self.settings.sync()
 
     def __init__(self):
+        
+        self.Initialize_Tables()
+
+        self.autosaveTimer.start(600000)  # autosave every 10 minutes
+        self.autosaveTimer.timeout.connect(self.saveState)
+
+    def Initialize_Tables(self):
         # Initialize itemTable as an id-itemData dictionary
         for item in itemDefinition.items:
             self.itemTable[item["id"]] = item.copy()
@@ -63,6 +71,3 @@ class GameState:
             for item_id, item in self.itemTable.items():
                 # Player does not own anything in a new game
                 item["ownedCount"] = 0
-        self.autosaveTimer.start(600000)  # autosave every 10 minutes
-        self.autosaveTimer.timeout.connect(self.saveState)
-

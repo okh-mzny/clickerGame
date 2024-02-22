@@ -57,6 +57,7 @@ class MainWindow(QtWidgets.QMainWindow):
         uic.loadUi("gui/uic/gui.ui", self)
         self.pushButton.setIcon(QtGui.QIcon("gui/res/pushBtn.png"))
         self.pushButton.clicked.connect(self.mainClickHandler)
+        self.resetButton.clicked.connect(self.resetClickHandler)
 
         for item_id, item in self.gameState.itemTable.items():
             newRowCount = self.shopTable.rowCount()
@@ -98,7 +99,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def closeEvent(self, a0):
         self.gameState.saveState()
-        #self.gameState.resetState()
+
+    def resetClickHandler(self):
+        self.gameState.resetState()
+        self.refreshGuiValues()
 
     def refreshGuiValues(self):
         # update item lines
