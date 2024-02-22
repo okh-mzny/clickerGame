@@ -125,7 +125,7 @@ class MainWindow(QtWidgets.QMainWindow):
         if(self.gameMathObj.total_gen()>0):
             self.gameState.score += math.ceil(0.01*self.gameMathObj.total_gen())
         else:
-            self.gameState.score+=1
+            self.gameState.score += 1
         self.numBytesLabel.setText(prettyPrint(self.gameState.score))
 
     def buyClickHandler(self):
