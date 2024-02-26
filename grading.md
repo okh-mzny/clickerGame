@@ -5,15 +5,15 @@
 ### Die Studierenden kennen die Grundelemente der prozeduralen Programmierung. (10)
 Siehe gameState.py, buyfunctions.py und mathLogic.py. <br>
 
-Dort haben wir sehr viel code ausgelagert in functionen, <br>
+Dort haben wir sehr viel code in functionen ausgelagert, <br>
 die wir mithilfe der Objekte schließlich in anderen Dateien aufrufen können, <br>
 um so den Code schlanker und übersichtlicher zu machen.
 
 ### Sie können die Syntax und Semantik von Python (10)
 
-In guiMain.py "prettyPrint()" haben wir mit Integer, float und String gearbeitet<br>
+In guiMain.py "prettyPrint()" haben wir mit Integer, Float und String gearbeitet<br>
 
-In items.py und upgrades.py haben wir dictionaries of dictionaries angelegt mit String-, float- und Integerwerten, <br>
+In items.py und upgrades.py haben wir dictionaries of dictionaries angelegt mit String-, Float- und Integerwerten, <br>
 die wir in anderen Teilen des Programms abgerufen haben.
 
 ### Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
