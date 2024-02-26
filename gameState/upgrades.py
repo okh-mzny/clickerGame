@@ -6,7 +6,7 @@ upgrades = (
      "fromid": "cpu",
      "toid": "raspb",
      "cost": 3,
-     "powmod": 0.1,
+     "powmod": 1,
      "redcost": 0.9,
      "costmod": 1.25
      },
@@ -17,7 +17,7 @@ upgrades = (
      "fromid": "gpu",
      "toid": "arduino",
      "cost": 5,
-     "powmod": 0.075,
+     "powmod": 2,
      "redcost": 0.75,
      "costmod": 1.5
      }
