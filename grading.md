@@ -22,7 +22,8 @@ die wir in anderen Teilen des Programms abgerufen haben.
 
 ### Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
 
-Als Datenstrukturen haben wir hauptsächlich Dictionaries of Dictionaries benutzt. 
+Als Datenstrukturen haben wir hauptsächlich Dictionaries of Dictionaries benutzt. Siehe items.py, upgrades.py und gamestate.py.
+Damit haben wir anfangs Standardwerte definiert, die wir in gameState variabel für den run auch verändern können. 
 
 ## METHODENKOMPETENZ (10 Punkte)
 -Wir haben git für die Sourcecontrol genutzt
