@@ -58,6 +58,8 @@ Als Framework für die GUI verwenden wir PyQt6, mit dem okh-mzny in der Gruppe b
 
 Qt ist ein verbreitetes GUI- und Programmframework, welches nativ auf vielen verschiedenen Platformen läuft. Darunter Embedded-Systeme wie Autos oder sogar Kaffeemaschinen.
 
+![Figure 3](docs/res/designer_eg0GTygCHY.png)
+
 Ein einfacher WYSIWYG-Editor erlaubt schnelles zusammenklicken einer GUI für die Verwendung im Code mittels einer .ui-Datei, die die vollständige Beschreibung der GUI enthält.
 
 Weitere Goodies wie ein abstrahiertes Speichersystem, welches automatisch den besten Speicherort auf dem Betriebssystem für Spieldaten findet und Timerfunktionen für Event-basiertes Programmieren statt einem infinite loop sind ebenso vorhanden.
@@ -66,7 +68,7 @@ PyQt6 als Python-Paket ist ein Python Binding an das "richtige" Qt, welches norm
 
 Für die Fehlerbehebung wurde stark auf den mächtigen eingebauten Debugger in PyCharm gesetzt.
 
-![Figure 3](docs/res/pycharm64_wPSIsnicil.png)
+![Figure 4](docs/res/pycharm64_wPSIsnicil.png)
 
 ## ÜBERGREIFENDE HANDLUNGSKOMPETENZ (30 Punkte)
 
