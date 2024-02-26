@@ -3,10 +3,13 @@
 ## FACHKOMPETENZ (40 Punkte)
 
 ### Die Studierenden kennen die Grundelemente der prozeduralen Programmierung. (10)
+Siehe gameState.py, buyfunctions.py und mathLogic.py. Dort haben wir seh viel code ausgelagert in functionen, 
+die wir mithilfe der Objekte schließlich in anderen Dateien aufrufen können, um so den Code schlanker und übersichtlicher zu machen.
 
 ### Sie können die Syntax und Semantik von Python (10)
 
 ### Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
+![Figure 1](GradingImag/Commithistory.png)
 
 ### Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
 
