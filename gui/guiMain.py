@@ -27,7 +27,7 @@ def prettyPrint(size_bytes):
     if size_bytes == 0:
         return "0 B"
     size_names = ("B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB")
-    exp = int(math.floor(math.log(size_bytes, 1024)))
+    exp = int(math.log(size_bytes, 1024))
     if(exp<len(size_names)):
         p = math.pow(1024, exp)
         round_size = round(size_bytes / p, 2)
@@ -35,7 +35,7 @@ def prettyPrint(size_bytes):
     else:
         p = math.pow(1024, len(size_names) - 1)
         round_size = round(size_bytes / p, 2)
-        exp = int(math.floor(math.log(round_size,10)))
+        exp = int(math.log(round_size,10))
         final_size = round(round_size / math.pow(10, exp), 2)
         return f"{final_size}e{exp} {size_names[len(size_names)-1]}"
 

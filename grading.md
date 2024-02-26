@@ -3,15 +3,26 @@
 ## FACHKOMPETENZ (40 Punkte)
 
 ### Die Studierenden kennen die Grundelemente der prozeduralen Programmierung. (10)
-Siehe gameState.py, buyfunctions.py und mathLogic.py. Dort haben wir seh viel code ausgelagert in functionen, 
-die wir mithilfe der Objekte schließlich in anderen Dateien aufrufen können, um so den Code schlanker und übersichtlicher zu machen.
+Siehe gameState.py, buyfunctions.py und mathLogic.py. 
+
+Dort haben wir sehr viel code ausgelagert in functionen, 
+die wir mithilfe der Objekte schließlich in anderen Dateien aufrufen können, 
+um so den Code schlanker und übersichtlicher zu machen.
 
 ### Sie können die Syntax und Semantik von Python (10)
 
+In guiMain.py "prettyPrint()" haben wir mit Integer, float und String gearbeitet
+
+In items.py und upgrades.py haben wir dictionaries of dictionaries angelegt mit String-, float- und Integerwerten, 
+die wir in anderen Teilen des Programms abgerufen haben.
+
 ### Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
-![Figure 1](GradingImag/Commithistory.png)
+
+![Figure 1](docx/res/Commithistory.png)
 
 ### Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
+
+Als Datenstrukturen haben wir hauptsächlich Dictionaries of Dictionaries benutzt. 
 
 ## METHODENKOMPETENZ (10 Punkte)
 
