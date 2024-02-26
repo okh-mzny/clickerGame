@@ -32,18 +32,19 @@ und schließlich mit QSettings local abspeichern und wieder aufrufen können.<br
 
 ### Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
 
--Wir haben git für die Sourcecontrol genutzt<br>
+- Wir haben git für die Sourcecontrol genutzt
 ![Figure 2](docs/res/Kompetenz.PNG)
--Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt
-(https://github.com/okh-mzny/clickerGame)<br>
--Als Umgebungen haben wir VS Code und PyCharm<br>
--Wir haben PyQt6 für die Oberfläche des Spiels genutzt<br>
--Powerpoint zum erstellen unserer Präsentation genutzt<br>
-
+- Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt (https://github.com/okh-mzny/clickerGame)
+- Als Umgebungen haben wir VS Code und PyCharm
+- Wir haben PyQt6 für die Oberfläche des Spiels genutzt
+- Powerpoint zum erstellen unserer Präsentation genutzt
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
 
-### Die Studierenden können ihre Software erläutern und begründen. (5)
+# Die Studierenden können ihre Software erläutern und begründen. (5)
+
+Das Spiel ist in der readme.md und in code comments beschrieben.
+Wir haben uns gegenseitig unsere Codeideen erklärt und beschrieben
 
 ### Sie können existierenden Code analysieren und beurteilen. (5)
 
@@ -53,24 +54,21 @@ Siehe critique.md
 
 ### Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
 
+Als Framework für die GUI verwenden wir PyQt6, mit dem okh-mzny in der Gruppe bereits Erfahrung hat die er den anderen Gruppenmitgliedern mitteilte.
+
+Qt ist ein verbreitetes GUI- und Programmframework, welches nativ auf vielen verschiedenen Platformen läuft. Darunter Embedded-Systeme wie Autos oder sogar Kaffeemaschinen.
+
+Ein einfacher WYSIWYG-Editor erlaubt schnelles zusammenklicken einer GUI für die Verwendung im Code mittels einer .ui-Datei, die die vollständige Beschreibung der GUI enthält.
+
+Weitere Goodies wie ein abstrahiertes Speichersystem, welches automatisch den besten Speicherort auf dem Betriebssystem für Spieldaten findet und Timerfunktionen für Event-basiertes Programmieren statt einem infinite loop sind ebenso vorhanden.
+
+PyQt6 als Python-Paket ist ein Python Binding an das "richtige" Qt, welches normalerweise mit C++ beschrieben wird.
+
+Für die Fehlerbehebung wurde stark auf den mächtigen eingebauten Debugger in PyCharm gesetzt.
+
+![Figure 3](docs/res/pycharm64_wPSIsnicil.png)
+
 ## ÜBERGREIFENDE HANDLUNGSKOMPETENZ (30 Punkte)
 
 ### Die Studierenden können eigenständig Problemstellungen der Praxis analysieren und zu deren Lösung Programme entwerfen (30)
 
-## Kenntnisse in prozeduraler Programmierung:
-
-### - Algorithmenbeschreibung
-
-### - Datentypen
-
-### - E/A-Operationen und Dateiverarbeitung
-
-### - Operatoren
-
-### - Kontrollstrukturen
-
-### - Funktionen
-
-### - Stringverarbeitung
-
-### - Strukturierte Datentypen
