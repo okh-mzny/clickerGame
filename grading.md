@@ -33,7 +33,7 @@ und schließlich mit QSettings local abspeichern und wieder aufrufen können.<br
 ### Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
 
 -Wir haben git für die Sourcecontrol genutzt<br>
-![Figure 2](docs/res/Kompetenz.PNG)
+![Figure 2](docs/res/Kompetenz.PNG)<br>
 -Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt
 (https://github.com/okh-mzny/clickerGame)<br>
 -Als Umgebungen haben wir VS Code und PyCharm<br>
