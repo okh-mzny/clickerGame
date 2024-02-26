@@ -97,3 +97,5 @@ Die Codestelle auf die wir besonders Stolz sind, ist unsere implementation der G
 und die anpassungsfähige erzeugung der Tabellenelemente. 
 
 ![Figure 4](docs/res/Items_Upgrades_Tabellen_erzeugen.png)
+
+Probleme die uns begegnet sind, sind unzureichendes Zeitmanagement und zwischendurch fehlende Kommunikation im Team.
