@@ -9,12 +9,23 @@ It is usually best practice to create a virtual environment to install the Pytho
 ```
 python -m venv venv
 ```
+---
+#### Activate the venv
 
+on Windows, run:
+```
+venv\Scripts\activate
+```
+on Unix or MacOS, run:
+```
+source venv/bin/activate
+```
+---
 Now install PyQt6 as specified in the requirements.txt.
 ```
 pip install -r requirements.txt
 ```
-
+---
 To launch the game now run
 
 ```
