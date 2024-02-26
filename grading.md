@@ -20,7 +20,7 @@ die wir in anderen Teilen des Programms abgerufen haben.
 
 ![Figure 1](docs/res/Commithistory.png)
 
-Am Bild kann man so ungefähr 
+Am Bild kann man so ungefähr sehen, wie wir über die Zeit unser Projekt erstellt haben.
 
 ### Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
 
