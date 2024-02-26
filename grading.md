@@ -41,15 +41,15 @@ und schließlich mit QSettings local abspeichern und wieder aufrufen können.<br
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
 
-# Die Studierenden können ihre Software erläutern und begründen. (5)
+### Die Studierenden können ihre Software erläutern und begründen. (5)
 
 Das Spiel ist in der readme.md und in code comments beschrieben.
 Wir haben uns gegenseitig unsere Codeideen erklärt und beschrieben
 
 ### Sie können existierenden Code analysieren und beurteilen. (5)
 
-https://github.com/dhbwJK23/Escape-Room<br>
-<br>
+https://github.com/dhbwJK23/Escape-Room
+
 Siehe critique.md
 
 ### Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
