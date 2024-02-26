@@ -38,22 +38,21 @@ und schließlich mit QSettings local abspeichern und wieder aufrufen können.
 
 ### Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
 
--Wir haben git für die Sourcecontrol genutzt
+- Wir haben git für die Sourcecontrol genutzt
 
 ![Figure 2](docs/res/Kompetenz.PNG)
 
--Wir haben git für die Sourcecontrol genutzt
+- Wir haben git für die Sourcecontrol genutzt
 
 ![Figure 2](docs/res/Kompetenz.PNG)
 
--Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt
-(https://github.com/okh-mzny/clickerGame)
+- Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt (https://github.com/okh-mzny/clickerGame)
 
--Als Umgebungen haben wir VS Code und PyCharm
+- Als Umgebungen haben wir VS Code und PyCharm
 
--Wir haben PyQt6 für die Oberfläche des Spiels genutzt
+- Wir haben PyQt6 für die Oberfläche des Spiels genutzt
 
--Powerpoint zum erstellen unserer Präsentation genutzt
+- Powerpoint zum erstellen unserer Präsentation genutzt
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
 
