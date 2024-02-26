@@ -45,7 +45,7 @@ und schließlich mit QSettings local abspeichern und wieder aufrufen können.
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
 
-# Die Studierenden können ihre Software erläutern und begründen. (5)
+### Die Studierenden können ihre Software erläutern und begründen. (5)
 
 ### Sie können existierenden Code analysieren und beurteilen. (5)
 
