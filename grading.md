@@ -29,6 +29,9 @@ Damit haben wir anfangs Standardwerte definiert, die wir in gameState variabel f
 und schließlich mit QSettings local abspeichern und wieder aufrufen können.
 
 ## METHODENKOMPETENZ (10 Punkte)
+
+### Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
+
 -Wir haben git für die Sourcecontrol genutzt
 ![Figure 2](docs/res/Kompetenz.PNG)
 -Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt
@@ -38,7 +41,7 @@ und schließlich mit QSettings local abspeichern und wieder aufrufen können.
 -Powerpoint zum erstellen unserer Präsentation genutzt
 
 
-### Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
+
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
 
