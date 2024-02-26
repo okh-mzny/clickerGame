@@ -38,14 +38,14 @@ und schließlich mit QSettings local abspeichern und wieder aufrufen können.
 
 ### Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
 
-<<<<<<< HEAD
--Wir haben git für die Sourcecontrol genutzt<br>
-![Figure 2](docs/res/Kompetenz.PNG)<br>
-=======
 -Wir haben git für die Sourcecontrol genutzt
 
 ![Figure 2](docs/res/Kompetenz.PNG)
->>>>>>> cc4c4df09da5a0871554fca2745a1f521db36053
+
+-Wir haben git für die Sourcecontrol genutzt
+
+![Figure 2](docs/res/Kompetenz.PNG)
+
 -Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt
 (https://github.com/okh-mzny/clickerGame)
 
