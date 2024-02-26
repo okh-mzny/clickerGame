@@ -92,5 +92,8 @@ Wir sind stolz auf die Struktur unseres Projektes.Insbesondere das wir die funkt
 
 Auch formal finden wir gleicht unser Projekt anderen seriösen Projekten.
 
-Die Codenstellen auf die wir besonders Stolz sind, ist unsere implementation der GUI. 
+Die Codestelle auf die wir besonders Stolz sind, ist unsere implementation der GUI 
 
+und die anpassungsfähige erzeugung der Tabellenelemente. 
+
+![Figure 4](docs/res/Items_Upgrades_Tabellen_erzeugen.png)
