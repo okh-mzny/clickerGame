@@ -3,17 +3,20 @@
 ## FACHKOMPETENZ (40 Punkte)
 
 ### Die Studierenden kennen die Grundelemente der prozeduralen Programmierung. (10)
-Siehe gameState.py, buyfunctions.py und mathLogic.py. <br>
+Siehe gameState.py, buyfunctions.py und mathLogic.py. 
 
-Dort haben wir sehr viel code in functionen ausgelagert, <br>
-die wir mithilfe der Objekte schließlich in anderen Dateien aufrufen können, <br>
+Dort haben wir sehr viel code in functionen ausgelagert,
+
+die wir mithilfe der Objekte schließlich in anderen Dateien aufrufen können,
+
 um so den Code schlanker und übersichtlicher zu machen.
 
 ### Sie können die Syntax und Semantik von Python (10)
 
-In guiMain.py "prettyPrint()" haben wir mit Integer, Float und String gearbeitet<br>
+In guiMain.py "prettyPrint()" haben wir mit Integer, Float und String gearbeitet
 
-In items.py und upgrades.py haben wir dictionaries of dictionaries angelegt mit String-, Float- und Integerwerten, <br>
+In items.py und upgrades.py haben wir dictionaries of dictionaries angelegt mit String-, Float- und Integerwerten,
+
 die wir in anderen Teilen des Programms abgerufen haben.
 
 ### Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
@@ -24,22 +27,28 @@ Am Bild kann man so ungefähr sehen, wie wir über die Zeit unser Projekt erstel
 
 ### Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
 
-Als Datenstrukturen haben wir hauptsächlich Dictionaries of Dictionaries benutzt. Siehe items.py, upgrades.py und gamestate.py.<br>
-Damit haben wir anfangs Standardwerte definiert, die wir in gameState variabel für den run auch verändern <br>
-und schließlich mit QSettings local abspeichern und wieder aufrufen können.<br>
+Als Datenstrukturen haben wir hauptsächlich Dictionaries of Dictionaries benutzt. Siehe items.py, upgrades.py und gamestate.py.
+
+Damit haben wir anfangs Standardwerte definiert, die wir in gameState variabel für den run auch verändern 
+
+und schließlich mit QSettings local abspeichern und wieder aufrufen können.
+
 
 ## METHODENKOMPETENZ (10 Punkte)
 
 ### Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
 
--Wir haben git für die Sourcecontrol genutzt<br>
+-Wir haben git für die Sourcecontrol genutzt
+
 ![Figure 2](docs/res/Kompetenz.PNG)
 -Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt
-(https://github.com/okh-mzny/clickerGame)<br>
--Als Umgebungen haben wir VS Code und PyCharm<br>
--Wir haben PyQt6 für die Oberfläche des Spiels genutzt<br>
--Powerpoint zum erstellen unserer Präsentation genutzt<br>
+(https://github.com/okh-mzny/clickerGame)
 
+-Als Umgebungen haben wir VS Code und PyCharm
+
+-Wir haben PyQt6 für die Oberfläche des Spiels genutzt
+
+-Powerpoint zum erstellen unserer Präsentation genutzt
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
 
@@ -47,8 +56,8 @@ und schließlich mit QSettings local abspeichern und wieder aufrufen können.<br
 
 ### Sie können existierenden Code analysieren und beurteilen. (5)
 
-https://github.com/dhbwJK23/Escape-Room<br>
-<br>
+https://github.com/dhbwJK23/Escape-Room
+
 Siehe critique.md
 
 ### Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
