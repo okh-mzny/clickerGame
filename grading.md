@@ -30,7 +30,7 @@ und schließlich mit QSettings local abspeichern und wieder aufrufen können.
 
 ## METHODENKOMPETENZ (10 Punkte)
 -Wir haben git für die Sourcecontrol genutzt
-![Figure 2](docs/res/Kompetenzen.PNG)
+![Figure 2](docs/res/Kompetenz.PNG)
 -Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt
 (https://github.com/okh-mzny/clickerGame)
 -Als Umgebungen haben wir VS Code und PyCharm
