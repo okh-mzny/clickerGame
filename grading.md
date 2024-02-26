@@ -29,7 +29,14 @@ Damit haben wir anfangs Standardwerte definiert, die wir in gameState variabel f
 und schließlich mit QSettings local abspeichern und wieder aufrufen können.
 
 ## METHODENKOMPETENZ (10 Punkte)
+<<<<<<< HEAD
 -Wir haben git für die sourcecontrol genutzt
+=======
+
+### Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
+
+-Wir haben git für die Sourcecontrol genutzt
+>>>>>>> 5531a8939cb4a6a7daddcc7bc63c3de93604ff99
 ![Figure 2](docs/res/Kompetenz.PNG)
 -Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt
 (https://github.com/okh-mzny/clickerGame)
@@ -38,7 +45,7 @@ und schließlich mit QSettings local abspeichern und wieder aufrufen können.
 -Powerpoint zum erstellen unserer Präsentation genutzt
 
 
-### Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
+
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
 
