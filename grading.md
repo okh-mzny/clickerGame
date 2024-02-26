@@ -88,4 +88,9 @@ Für die Fehlerbehebung wurde stark auf den mächtigen eingebauten Debugger in P
 ## ÜBERGREIFENDE HANDLUNGSKOMPETENZ (30 Punkte)
 
 ### Die Studierenden können eigenständig Problemstellungen der Praxis analysieren und zu deren Lösung Programme entwerfen (30)
+Wir sind stolz auf die Struktur unseres Projektes.Insbesondere das wir die funktionellen Komponenten des Programms Inhaltlich sauber trennen konnten.
+
+Auch formal finden wir gleicht unser Projekt anderen seriösen Projekten.
+
+Die Codenstellen auf die wir besonders Stolz sind, ist unsere implementation der GUI. 
 
