@@ -25,6 +25,14 @@ die wir in anderen Teilen des Programms abgerufen haben.
 Als Datenstrukturen haben wir hauptsächlich Dictionaries of Dictionaries benutzt. 
 
 ## METHODENKOMPETENZ (10 Punkte)
+-Wir haben git für die Sourcecontrol genutzt
+![Figure 2](docx/res/Kompetenzen.png)
+-Wir haben Github als Dreh- und Angelpunkt unserer Zusammenarbeit genutzt
+(https://github.com/okh-mzny/clickerGame)
+-Als Umgebungen haben wir VS Code und PyCharm
+-Wir haben PyQt6 für die Oberfläche des Spiels genutzt
+-Powerpoint zum erstellen unserer Präsentation genutzt
+
 
 ### Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
 
