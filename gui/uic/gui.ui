@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1114</width>
+    <width>1158</width>
     <height>448</height>
    </rect>
   </property>
@@ -30,27 +30,18 @@
     </sizepolicy>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="1">
-     <widget class="QTableWidget" name="upgradeTable">
-      <property name="columnCount">
-       <number>1</number>
-      </property>
-      <column>
-       <property name="text">
-        <string>Upgrades</string>
-       </property>
-      </column>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QPushButton" name="resetButton">
-      <property name="text">
-       <string>Reset All</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="0" rowspan="2">
      <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="0">
+       <widget class="QLabel" name="numBpsLabel">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
       <item row="0" column="0">
        <widget class="QLabel" name="numBytesLabel">
         <property name="sizePolicy">
@@ -117,16 +108,6 @@
         </property>
         <property name="flat">
          <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="numBpsLabel">
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
@@ -198,6 +179,18 @@
       </item>
      </layout>
     </item>
+    <item row="0" column="1">
+     <widget class="QTableWidget" name="upgradeTable">
+      <property name="columnCount">
+       <number>1</number>
+      </property>
+      <column>
+       <property name="text">
+        <string>Upgrades</string>
+       </property>
+      </column>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -205,12 +198,24 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1114</width>
-     <height>26</height>
+     <width>1158</width>
+     <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuActions">
+    <property name="title">
+     <string>Actions</string>
+    </property>
+    <addaction name="actionReset"/>
+   </widget>
+   <addaction name="menuActions"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
