@@ -18,12 +18,15 @@ die wir in anderen Teilen des Programms abgerufen haben.
 
 ### Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
 
-![Figure 1](docx/res/Commithistory.png)
+![Figure 1](docs/res/Commithistory.png)
+
+Am Bild kann man so ungefähr 
 
 ### Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
 
 Als Datenstrukturen haben wir hauptsächlich Dictionaries of Dictionaries benutzt. Siehe items.py, upgrades.py und gamestate.py.
-Damit haben wir anfangs Standardwerte definiert, die wir in gameState variabel für den run auch verändern können. 
+Damit haben wir anfangs Standardwerte definiert, die wir in gameState variabel für den run auch verändern 
+und schließlich mit QSettings local abspeichern und wieder aufrufen können.
 
 ## METHODENKOMPETENZ (10 Punkte)
 
