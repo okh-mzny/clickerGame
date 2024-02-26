@@ -48,6 +48,9 @@ Wir haben uns gegenseitig unsere Codeideen erklärt und beschrieben
 
 ### Sie können existierenden Code analysieren und beurteilen. (5)
 
+https://github.com/dhbwJK23/Escape-Room<br>
+<br>
+Siehe critique.md
 
 ### Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
 
